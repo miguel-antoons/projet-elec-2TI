@@ -1,0 +1,62 @@
+#include <projet_elec_2021.h>
+
+boolean flag_timer_1 = 0;
+
+#INT_TIMER1
+void  TIMER1_isr(void) 
+{
+   set_timer1(0);
+   flag_timer_1 = 1;
+}
+
+void main()
+{
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_2);      //26.2 ms overflow
+
+
+   enable_interrupts(INT_TIMER1);
+   enable_interrupts(GLOBAL);
+   setup_low_volt_detect(FALSE);
+   
+   int val = 0;
+   int val_2 = 0;
+   int *val_shown = &val;
+   int e_index = 2;
+   boolean flag = 0;
+   int index = 0;
+   set_timer1(0);
+   
+   while(TRUE)
+   {
+      if (flag_timer_1){
+         flag_timer_1 = 0;
+         index++;
+      }
+      
+      if (index > 10){
+         if (val == 9) {
+            val = 0;
+            val_2++;
+         }
+         else {
+            val++;
+         }
+         if (val_2 == 10) {
+            val = 0;
+            val_2 = 0;
+         }
+      }
+      
+      if (flag) {
+         val_shown = &val_2;
+         e_index = 1;
+      }
+      else {
+         val_shown = &val;
+         e_index = 2;
+      }
+      output_e(e_index);
+      output_d(*val_shown);
+      flag = !flag;
+   }
+}

@@ -1,0 +1,25 @@
+#include <projet_elec_2021.h>
+
+#INT_TIMER1
+void  TIMER1_isr(void) 
+{
+
+}
+
+void main()
+{
+	setup_timer_1(T1_INTERNAL|T1_DIV_BY_2);		//26.2 ms overflow
+
+
+	enable_interrupts(INT_TIMER1);
+	enable_interrupts(GLOBAL);
+   setup_low_volt_detect(FALSE);
+
+	while(TRUE)
+	{
+
+
+		//TODO: User Code
+	}
+
+}
