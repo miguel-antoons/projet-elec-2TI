@@ -1,5 +1,4 @@
-import serial 
-import serial.tools.list_ports
+import serial # pip install pyserial
 from termcolor import colored
 
 ser = serial.Serial('COM3', baudrate=9600, timeout=1)
