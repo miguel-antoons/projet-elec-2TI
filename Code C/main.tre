@@ -1,8 +1,10 @@
 ÀÄmain
-   ÃÄMAIN  0/350  Ram=5
+   ÃÄMAIN  0/378  Ram=5
    ³  ÃÄ??0??
    ³  ÃÄatoi  0/412  Ram=9
    ³  ³  ÀÄ@MUL88  0/76  Ram=2
+   ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ÃÄ@DIV88  0/40  Ram=3
    ³  ÃÄ@PRINTF_D_9600_31766_31767  0/210  Ram=6
    ³  ³  ÃÄ@DIV88  0/40  Ram=3
    ³  ³  ÀÄ@DIV88  0/40  Ram=3

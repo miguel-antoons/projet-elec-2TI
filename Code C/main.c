@@ -85,10 +85,13 @@ void main()
             
             // if the counter is equal to 9 the red led's output il toggle
             // this is done in order to let the red led blink
-            if (timer_counter > 6) {
+            if (timer_counter % 10 == 0) {
                timer_counter = 0;
                output_low(PIN_B7);
                output_high(PIN_B6);
+            }
+            else if (timer_counter % 5 == 0) {
+               output_low(PIN_B6);
             }
          }
       }
@@ -145,7 +148,7 @@ void main()
       
       // invert the value in order to show the other value on next iteration
       toggle = !toggle;
-      delay_ms(5);
+      delay_ms(10);
    }
 
 }
