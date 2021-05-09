@@ -1,0 +1,24 @@
+[PROJECT]
+Target=C:\Users\antoo\Documents\Ephec\electronique_digitale\projet-elec-2TI\Code C\main.hex
+Development_Mode=
+Processor_Text=PIC18F458
+ToolSuite=CCS
+Processor=0x8458
+[C:\Users\antoo\Documents\Ephec\electronique_digitale\projet-elec-2TI\Code C\main]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=C:\Users\antoo\Documents\Ephec\electronique_digitale\projet-elec-2TI\Code C\main.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Units]
+Link=0
+Count=1
+1=C:\Users\antoo\Documents\Ephec\electronique_digitale\projet-elec-2TI\Code C\main
+[Opened Files]
+1=C:\Users\antoo\Documents\Ephec\electronique_digitale\projet-elec-2TI\Code C\main.c
+2=

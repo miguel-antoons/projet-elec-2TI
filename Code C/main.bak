@@ -1,4 +1,4 @@
-#include "C:\Users\antoo\Documents\Ephec\electronique_digitale\Code C\elec_projet.h"
+#include "C:\Users\antoo\Documents\Ephec\electronique_digitale\projet-elec-2TI\Code C\main.h"
 #include <string.h>
 #include <stdlib.h>
 

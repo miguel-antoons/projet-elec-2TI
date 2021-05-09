@@ -1,0 +1,12 @@
+ÀÄmain
+   ÃÄMAIN  0/344  Ram=5
+   ³  ÃÄ??0??
+   ³  ÃÄatoi  0/412  Ram=9
+   ³  ³  ÀÄ@MUL88  0/76  Ram=2
+   ³  ÀÄ@PRINTF_D_9600_31766_31767  0/210  Ram=6
+   ³     ÃÄ@DIV88  0/40  Ram=3
+   ³     ÀÄ@DIV88  0/40  Ram=3
+   ÃÄTIMER1_isr  0/12  Ram=0
+   ÃÄEXT_isr  0/10  Ram=0
+   ÃÄEXT1_isr  0/10  Ram=0
+   ÀÄRDA_isr  0/16  Ram=0
