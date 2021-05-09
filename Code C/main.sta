@@ -1,6 +1,6 @@
 
-ROM used: 1320 (4%)
-          1320 (4%) including unused fragments
+ROM used: 1318 (4%)
+          1318 (4%) including unused fragments
 
           1 Average locations per line
           3 Average locations per statement
@@ -26,11 +26,11 @@ Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
 0     76   3   2             @MUL88
 0    412  16   9  1815 10.5  atoi
-0     12   0   0    38  1.4  TIMER1_isr
+0      8   0   0    22  1.2  TIMER1_isr
 0     10   0   0    35  1.7  EXT_isr
 0     10   0   0    35  1.7  EXT1_isr
 0     16   1   0    52  1.9  RDA_isr
-0    344  13   5  1902  9.0  MAIN
+0    346  13   5  1936  9.0  MAIN
 0     40   2   3             @DIV88
 0    210   8   6             @PRINTF_D_9600_31766_31767
 
@@ -51,7 +51,7 @@ Program metrics:
 00000-00002     4  0  
 00004-00006     0  4  
 00008-000C0   186  0  
-000C2-07FFE  1130  31444  
+000C2-07FFE  1128  31446  
 
 
 

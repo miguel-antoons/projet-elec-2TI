@@ -12,7 +12,6 @@ boolean flag_rda = 0;
 #int_TIMER1
 void  TIMER1_isr(void) 
 {
-   set_timer1(0);
    flag_timer = 1;
 }
 
@@ -80,6 +79,7 @@ void main()
       // value received from the rs232 and timer1
       if (too_many_people) {
          if (flag_timer) {
+            set_timer1(0);
             flag_timer = 0;
             
             // counter will increment on each timer finish
@@ -138,11 +138,11 @@ void main()
       // check which screen and which value to show
       if (toggle) {
          output_d(people_inside_units);
-         output_e(2);
+         output_e(1);
       }
       else {
          output_d(people_inside_tens);
-         output_e(1);
+         output_e(2);
       }
       
       // invert the value in order to show the other value on next iteration

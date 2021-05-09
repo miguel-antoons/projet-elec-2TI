@@ -147,7 +147,6 @@ void main()
       
       // invert the value in order to show the other value on next iteration
       toggle = !toggle;
-      delay_ms(50);
    }
 
 }
