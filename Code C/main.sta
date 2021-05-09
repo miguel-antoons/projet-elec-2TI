@@ -1,6 +1,6 @@
 
-ROM used: 1318 (4%)
-          1318 (4%) including unused fragments
+ROM used: 1314 (4%)
+          1314 (4%) including unused fragments
 
           1 Average locations per line
           3 Average locations per statement
@@ -12,7 +12,7 @@ Stack used: 3 worst case (out of 30 total available)
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  153    73  16  main.c
+  151    72  16  main.c
    27     0   0  main.h
   394     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\18F458.h
   417     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
@@ -20,28 +20,28 @@ Lines Stmts  %   Files
    28     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
  1360   380  84  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
 ----- -----
- 2407   453 Total
+ 2405   452 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
 0     76   3   2             @MUL88
 0    412  16   9  1815 10.5  atoi
-0      8   0   0    22  1.2  TIMER1_isr
+0     12   0   0    38  1.4  TIMER1_isr
 0     10   0   0    35  1.7  EXT_isr
 0     10   0   0    35  1.7  EXT1_isr
 0     16   1   0    52  1.9  RDA_isr
-0    346  13   5  1936  9.0  MAIN
+0    338  13   5  1868  9.0  MAIN
 0     40   2   3             @DIV88
 0    210   8   6             @PRINTF_D_9600_31766_31767
 
 Program metrics:
     Functions               6
-    Statements              453
+    Statements              452
     Comments                639
-    Volume (V)              4744
+    Volume (V)              4706
     Difficilty (D)          27.8
-    Effort to implement (E) 131735
-    Time to implement (T)   2 hours, 2 minutes
+    Effort to implement (E) 130623
+    Time to implement (T)   2 hours, 1 minutes
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   19
     Maintainability (MI)    52
@@ -51,7 +51,7 @@ Program metrics:
 00000-00002     4  0  
 00004-00006     0  4  
 00008-000C0   186  0  
-000C2-07FFE  1128  31446  
+000C2-07FFE  1124  31450  
 
 
 

@@ -13,6 +13,7 @@ boolean flag_rda = 0;
 void  TIMER1_isr(void) 
 {
    flag_timer = 1;
+   set_timer1(0);
 }
 
 #int_EXT
@@ -64,8 +65,6 @@ void main()
 //Setup_Oscillator parameter not selected from Intr Oscillotar Config tab
 
    set_timer1(0);
-   
-   output_high(PIN_E0);
 
    while (TRUE) {
       // check if there was any data received from rs232
@@ -79,7 +78,6 @@ void main()
       // value received from the rs232 and timer1
       if (too_many_people) {
          if (flag_timer) {
-            set_timer1(0);
             flag_timer = 0;
             
             // counter will increment on each timer finish
@@ -90,7 +88,7 @@ void main()
             if (timer_counter > 6) {
                timer_counter = 0;
                output_low(PIN_B7);
-               output_toggle(PIN_B6);
+               output_high(PIN_B6);
             }
          }
       }
