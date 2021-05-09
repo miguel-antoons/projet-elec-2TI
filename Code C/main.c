@@ -13,7 +13,6 @@ boolean flag_rda = 0;
 void  TIMER1_isr(void) 
 {
    flag_timer = 1;
-   set_timer1(0);
 }
 
 #int_EXT
@@ -78,6 +77,7 @@ void main()
       // value received from the rs232 and timer1
       if (too_many_people) {
          if (flag_timer) {
+            set_timer1(0);
             flag_timer = 0;
             
             // counter will increment on each timer finish
@@ -145,6 +145,7 @@ void main()
       
       // invert the value in order to show the other value on next iteration
       toggle = !toggle;
+      delay_ms(5);
    }
 
 }
