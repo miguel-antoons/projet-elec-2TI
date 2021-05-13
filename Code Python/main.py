@@ -20,16 +20,28 @@ class MyApp:
         # initialization des composants
         self.frame = Frame(self.window, bg='#41B77F')
 
+        # Nombre de personne maximum
+        self.text_counter = StringVar()
+        self.text_counter.set("3")
+        self.counter = 3
+        
+        # nombre de personne dans la pièce
+        self.com = 0
+
         # creation des composants
         self.create_widgets()
         self.update_text()
 
         # empaquetage
         self.frame.pack(expand=YES)
-        
+
     # Création de tous les composants
     def create_widgets(self):
-        self.create_title()
+        self.create_button_delete()
+        self.create_button_add()
+        self.create_title()  
+        self.create_msg_max() 
+        self.create_person_max()
         self.create_msg()
         self.create_person()
         self.create_warning()
@@ -40,6 +52,42 @@ class MyApp:
         label_title = Label(self.frame, text="Pojet elec 2021", font=("Courrier", 40), bg='#41B77F',
                             fg='white')
         label_title.pack()
+
+    # Creation du bouton -
+    def create_button_delete(self):
+        button = Button(self.frame, text="-", font=("Courrier", 15), bg='white', fg='#41B77F',
+                           command=self.delete_person, width=4, height=2)
+        button.pack(side=LEFT, padx=10, pady=10)
+
+    # décrémente le nombre de personne maximum dans la pièce 
+    def delete_person(self):
+        if self.counter > 1:
+            self.counter -= 1
+            self.text_counter.set(self.counter)
+
+    # Creation du bouton +
+    def create_button_add(self):
+        button = Button(self.frame, text="+", font=("Courrier", 15), bg='white', fg='#41B77F',
+                           command=self.add_person, width=4, height=2)
+        button.pack(pady=25, fill=X, side=RIGHT)
+
+    # incrémente le nombre de personne maximum dans la pièce 
+    def add_person(self):
+        self.counter += 1
+        self.text_counter.set(self.counter)
+
+    # Création du message
+    def create_msg_max(self):
+        label_msg = Label(self.frame, text="Nombre de personne maximum : ", font=("Courrier", 20), bg='#41B77F',
+                               fg='white')
+        label_msg.pack()
+
+    # Création du nombre de personne
+    def create_person_max(self):
+        label_person = Label(self.frame, textvariable=self.text_counter, font=("Courrier", 30), bg='#41B77F',
+                               fg='white', height="3")
+        label_person.pack()
+
 
     # Création du message
     def create_msg(self):
@@ -65,10 +113,11 @@ class MyApp:
         com = ser.readline().decode('ascii')
 
         if len(com) != 0:
+            self.com = com
             # Si le nombre de personne est plus grand que 3 : 
             # un message attention s'affiche
             # La led rouge sur le PIC s'allume
-            if int(com) > 3:
+            if int(com) > self.counter:
                 # Message 'warning'
                 self.text.set(com)
                 self.text_warning.set("Attention Il y a trop de personnes dans la pièce")
