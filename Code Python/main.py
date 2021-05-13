@@ -1,8 +1,6 @@
 import serial # pip install pyserial
 from termcolor import colored
 from tkinter import *
-import webbrowser
-from PIL import Image
 
 class MyApp:
     def __init__(self):
